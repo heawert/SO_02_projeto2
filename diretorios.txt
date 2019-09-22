@@ -1,0 +1,8 @@
+root root root a_home (null) 08 45 00 22 01 97 1
+a_home a root ggg b_home 00 00 00 00 00 00 1
+b_home b root (null) cde 00 00 00 00 00 00 1
+cde root root (null) c_home 00 00 00 00 00 00 0
+ggg a a_home (null) fff 00 00 00 00 00 00 0
+fff a a_home (null) (null) 00 00 00 00 00 00 0
+c_home c root (null) abcd 00 00 00 00 00 00 1
+abcd root root (null) (null) 00 00 00 00 00 00 0

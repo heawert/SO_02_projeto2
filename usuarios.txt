@@ -1,0 +1,4 @@
+root toor 0 root
+a a 0 a_home
+b b 1 b_home
+c c 0 c_home
