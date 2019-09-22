@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1569094814 source:c:\users\joao\desktop\diretorios\main.c
+	"structs.h"
+	"processa.h"
+	"funcoes.h"
+	<stdio.h>
+	<stdlib.h>
+	"loader.h"
+
+1568995944 c:\users\joao\desktop\diretorios\processa.h
+	<string.h>
+	<stdlib.h>
+
+1569094501 c:\users\joao\desktop\diretorios\structs.h
+
+1569096460 c:\users\joao\desktop\diretorios\funcoes.h
+	<locale.h>
+	<stdio.h>
+	"p_windows.h"
+	"funcoes_usuario.h"
+
+1568989653 c:\users\joao\desktop\diretorios\p_windows.h
+
+1569096037 c:\users\joao\desktop\diretorios\loader.h
+
+1569096475 c:\users\joao\desktop\diretorios\funcoes_usuario.h
+
