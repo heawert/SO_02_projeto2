@@ -99,6 +99,9 @@ int erro(int valor_erro){
         case 8:
             printf("já existe um diretório com este nome\n");
             break;
+        case 9:
+            printf("já existe um usuário com este nome\n");
+            break;
         printf("não é possivel");
         }
         return 0;

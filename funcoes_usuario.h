@@ -30,6 +30,13 @@ int add_user(parametro *para){
     if(para->prox->prox!=NULL)
         return 1;
 
+    temp = root;
+    while(temp!=NULL){
+        if(!strcmp(temp->nome,para->valor))
+            return 9;
+        temp = temp->prox;
+    }
+
 
 
     temp = (usuario*)malloc(sizeof(usuario));
