@@ -85,6 +85,15 @@ int mkdir(parametro *para){
         return 1;
 
     diretorio *temp, *aux;
+
+    temp = diretorio_atual->filho;
+    while(temp!=NULL){
+        if(!strcmp(temp->nome,para->valor))
+            return 8;
+        temp = temp->irmao;
+    }
+
+
     temp = (diretorio*)malloc(sizeof(diretorio));
     aux = root_dir;
     while(aux->prox!=NULL)
@@ -123,12 +132,12 @@ int rmdir(parametro *para){
     if(para->prox!=NULL)
         return 1;
 
-    diretorio *temp_dir, *aux_dir, *aux2_dir;
+    diretorio *temp_dir, *aux_dir;
     temp_dir = diretorio_atual;
     aux_dir = diretorio_atual->filho;
     while(1){
 
-        if(aux_dir==NULL)
+        if(aux_dir==NULL)                                                   //quebra o laço se não existirem mais diretório para procurar
             break;
         if(!strcmp(aux_dir->nome,para->valor)){                             //testa o nome
             if(aux_dir->filho==NULL)                                        //testa se esta vazio
@@ -138,14 +147,14 @@ int rmdir(parametro *para){
                             diretorio_atual->filho = aux_dir->irmao;
                         else{
                             temp_dir = diretorio_atual->filho;
-                            while(temp_dir->irmao!=aux_dir)
-                                temp_dir = temp_dir->irmao;
+                            while(temp_dir->irmao!=aux_dir) temp_dir = temp_dir->irmao;
                             temp_dir->irmao = aux_dir->irmao;
                         }
+
                         temp_dir = root_dir;
-                        while(temp_dir->prox!=aux_dir)
-                            temp_dir = temp_dir->prox;
+                        while(temp_dir->prox!=aux_dir) temp_dir = temp_dir->prox;
                         temp_dir->prox = aux_dir->prox;
+
                         free(aux_dir);
                         store_dir();
                         return 0;
